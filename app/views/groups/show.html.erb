@@ -1,0 +1,17 @@
+<h1><%= @group.name %></h1>
+
+<h2>Choose a Raid:</h2>
+
+<% Raid.all.each do |raid| %>
+  <div id="<%=raid.id%>">
+    <p><%= raid.name %> </p>
+    <p><%= raid.location %></p>
+    <p><%= raid.description %></p>
+  </div>
+<% end %>
+
+<% if @group.users.any? %>
+  <p>Users in group: <%= @group.users.count %></p>
+<% else %>
+  <p>There are currently no users in this group</p>
+<% end %>
