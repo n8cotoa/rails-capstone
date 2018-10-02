@@ -1,12 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/nate/Desktop/destiny-raid-app/spec/models/encounter_spec.rb": [
+      "/Users/nate/Desktop/destiny-raid-app/spec/models/chat_room_spec.rb": [
         1,
         null,
         1,
         1,
-        2,
         2,
         2,
         null,
@@ -588,6 +587,12 @@
       "/Users/nate/Desktop/destiny-raid-app/config/routes.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ],
@@ -625,11 +630,64 @@
         null,
         null
       ],
+      "/Users/nate/Desktop/destiny-raid-app/app/controllers/groups_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/nate/Desktop/destiny-raid-app/app/jobs/application_job.rb": [
         1,
         null
       ],
       "/Users/nate/Desktop/destiny-raid-app/app/mailers/application_mailer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/nate/Desktop/destiny-raid-app/app/models/chat_room.rb": [
         1,
         1,
         1,
@@ -647,10 +705,16 @@
         1,
         1,
         1,
-        1,
+        null,
         null
       ],
       "/Users/nate/Desktop/destiny-raid-app/app/models/map.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/nate/Desktop/destiny-raid-app/app/models/message.rb": [
+        1,
         1,
         1,
         null
@@ -666,6 +730,17 @@
         1,
         null
       ],
+      "/Users/nate/Desktop/destiny-raid-app/spec/models/encounter_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
       "/Users/nate/Desktop/destiny-raid-app/spec/models/group_spec.rb": [
         1,
         null,
@@ -674,7 +749,7 @@
         2,
         2,
         2,
-        2,
+        null,
         null,
         null
       ],
@@ -683,6 +758,16 @@
         null,
         1,
         1,
+        2,
+        null,
+        null
+      ],
+      "/Users/nate/Desktop/destiny-raid-app/spec/models/message_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
         2,
         null,
         null
@@ -714,6 +799,6 @@
         null
       ]
     },
-    "timestamp": 1538431397
+    "timestamp": 1538511372
   }
 }
