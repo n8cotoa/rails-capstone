@@ -28,6 +28,8 @@ class GroupsController < ApplicationController
   
   def raidroom
     @group = Group.find(params[:group_id])
+    @chat_room = ChatRoom.find_by(group_id: params[:group_id])
+    @message = Message.new
     @raid = Raid.find(@group.raid_id)
     @current_encounter = nil
     @map = nil
