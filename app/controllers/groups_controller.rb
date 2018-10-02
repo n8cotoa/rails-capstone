@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save 
+      ChatRoom.create(group_id: @group.id)
       redirect_to group_path(@group)
     else
       redirect_to new_group_path

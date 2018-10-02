@@ -603,6 +603,7 @@
         1,
         null,
         1,
+        1,
         null
       ],
       "/Users/nate/Desktop/destiny-raid-app/app/models/application_record.rb": [
@@ -796,9 +797,10 @@
         null,
         1,
         2,
+        2,
         null
       ]
     },
-    "timestamp": 1538511372
+    "timestamp": 1538511530
   }
 }
