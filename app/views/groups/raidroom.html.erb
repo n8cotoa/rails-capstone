@@ -3,12 +3,31 @@
 </div>
 <div class="encounters">
   <% @raid.encounters.each do |encounter| %>
-    <div class="encounter-block">
-      <p><%= encounter.name %></p>
-      <p><%= encounter.description %></p>
+    <div>
       <%= form_for @group do |f| %>
         <%=f.hidden_field :current_encounter_id, :value => encounter.id %>
+        <%=f.submit encounter.name, class: 'encounter-block' %>
       <% end %>
     </div>
+  <% end %>
+</div>
+<div class="current_encounter">
+  <% if @group.current_encounter_id != nil %>
+    <div class="current_encounter_info">
+      <div class="current_encounter_symbols">
+        <% @current_encounter.raid_symbols.each do |raid_symbol| %>
+        <div class="raid_symbols">
+          <p><%= raid_symbol.name %></p>
+          <p><%= raid_symbol.description %></p>
+          <p><%= raid_symbol.image %></p>
+        </div>
+        <% end %>
+      </div>
+      <div class="current_encounter_map">
+        <p><%= @map.image %></p>
+      </div>
+    </div>
+  <% else %>
+    <p>Select an encounter.</p>
   <% end %>
 </div>

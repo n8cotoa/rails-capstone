@@ -1,0 +1,39 @@
+.banner {
+  background-color: purple;
+  color: gold;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  padding: 50px 0px;
+}
+
+.banner h1 {
+  
+}
+
+.encounters {
+  display: flex;
+  justify-content: space-around;
+}
+
+.encounter-block {
+  padding: 10px 25px;
+  background-color: pink;
+  text-align: center;
+}
+
+.current_encounter_info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_encounter_symbols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.raid_symbols {
+  padding: 10px;
+  text-align: center;
+}

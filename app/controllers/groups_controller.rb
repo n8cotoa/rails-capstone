@@ -28,6 +28,12 @@ class GroupsController < ApplicationController
   def raidroom
     @group = Group.find(params[:group_id])
     @raid = Raid.find(@group.raid_id)
+    @current_encounter = nil
+    @map = nil
+    if @group.current_encounter_id != nil
+      @current_encounter = Encounter.find(@group.current_encounter_id)
+      @map = Map.find(@current_encounter.id)
+    end
   end
   
 private

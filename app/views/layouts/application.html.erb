@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <div class="ui secondary pointing menu">
+      <%= link_to 'Home', groups_path, class: 'active item' %>
+      
+      <div class="right menu">
+        <% if current_user != nil %>
+          <p class='ui item'><%= current_user.email %></p>
+          <p class='ui item'>|</p>
+          <%= link_to 'Logout', destroy_user_session_path(current_user), class: 'ui item' %>
+        <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'ui item' %>
+          <%= link_to 'Login', new_user_session_path, class: 'ui item' %>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
