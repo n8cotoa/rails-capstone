@@ -13,7 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery
 //= require_tree .
 // Loads all Semantic javascripts
 //= require semantic-ui
 //= require cable
+
