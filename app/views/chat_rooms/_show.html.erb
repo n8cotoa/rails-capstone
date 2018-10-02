@@ -4,11 +4,13 @@
   <%= render @chat_room.messages %>
 </div>
 
-<%= form_for @message, url: '#' do |f| %>
-  <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: 'form-control' %>
-  </div>
+<div class="ui form">
+  <%= form_for @message, url: '#' do |f| %>
+    <div class="field">
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
 
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
-<% end %>
+    <%= f.submit "Post", class: 'ui button' %>
+  <% end %>
+</div>

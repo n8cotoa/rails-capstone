@@ -39,3 +39,16 @@
   padding: 10px;
   text-align: center;
 }
+
+#messages {
+  border: 1px lightgrey solid;
+  height: 200px;
+  width: 400px;
+  overflow-y:scroll;
+  margin-bottom: 5px;
+}
+
+.field textarea {
+  width: 400px !important;
+  height: 100px !important;
+}
