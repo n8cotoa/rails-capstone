@@ -48,6 +48,32 @@
   margin-bottom: 5px;
 }
 
+.single_message {
+  border-bottom: lightgrey 1px solid;
+  margin: 5px auto;
+  width: 95%;
+}
+
+.message_right {
+  background-color: lightblue;
+  color: white;
+  border-radius: 5px;
+  border-bottom-right-radius:  0px;
+}
+
+.message_content {
+  margin-left: 5px;
+}
+
+.message_user {
+  text-align: right;
+  margin-right: 5px;
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  color: white;
+}
+
 .field textarea {
   width: 400px !important;
   height: 100px !important;

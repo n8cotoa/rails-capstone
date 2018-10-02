@@ -1,15 +1,14 @@
-<div class="card">
-  <div class="card-block">
-    <div class="row">
-      <div class="col-md-1">
-        <%= message.user.name %>
-      </div>
-      <div class="col-md-11">
-        <p class="card-text">
-          <span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
-          <%= message.content %>
-        </p>
-      </div>
-    </div>
-  </div>
+<% if message.user == current_user %>
+<div class="single_message message_right">
+  <p class='message_content'><%= message.content %></p>
+  <p class='message_user'>User: <%= message.user.name %></p>
 </div>
+<% else %>
+<div class="single_message message_left">
+  <p class='message_content'><%= message.content %></p>
+  <p class='message_user'>User: <%= message.user.name %></p>
+</div>
+<% end %>
+        
+
+          
