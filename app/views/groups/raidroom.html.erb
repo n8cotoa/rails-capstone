@@ -1,0 +1,14 @@
+<div class="banner">
+  <h1><%= @raid.name %></h1>
+</div>
+<div class="encounters">
+  <% @raid.encounters.each do |encounter| %>
+    <div class="encounter-block">
+      <p><%= encounter.name %></p>
+      <p><%= encounter.description %></p>
+      <%= form_for @group do |f| %>
+        <%=f.hidden_field :current_encounter_id, :value => encounter.id %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

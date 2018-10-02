@@ -3,10 +3,15 @@
 <h2>Choose a Raid:</h2>
 
 <% Raid.all.each do |raid| %>
-  <div id="<%=raid.id%>">
-    <p><%= raid.name %> </p>
-    <p><%= raid.location %></p>
-    <p><%= raid.description %></p>
+  <div id="raid<%=raid.id%>">
+    <%= form_for @group do |f| %>
+      <p><%= raid.name %> </p>
+      <p><%= raid.location %></p>
+      <p><%= raid.description %></p>
+    <%= f.hidden_field :id, :value => @group.id %>
+    <%= f.hidden_field :raid_id, :value => raid.id %>
+    <%= f.submit 'Select Raid' %>
+    <% end %>
   </div>
 <% end %>
 
