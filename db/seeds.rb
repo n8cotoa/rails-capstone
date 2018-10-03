@@ -26,7 +26,7 @@ class Seed
   def generate_encounters
     15.times do |i|
       raid_id = Raid.all.shuffle.first.id
-      Encounter.create!(name: "Encounter #{i}", description: "Description for Encounter #{i}.", stradegy: "Stradegy for Encounter #{i}", raid_id: raid_id)
+      Encounter.create!(name: "Encounter #{i}", description: "Description for Encounter #{i}.", stradegy: "Strategy for Encounter #{i}", raid_id: raid_id)
     end
   end
   

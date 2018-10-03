@@ -30,8 +30,13 @@
           </div>
           <% end %>
         </div>
-        <div class="current_encounter_map">
-          <p><%= @map.image %></p>
+        <div class="map_strategy">
+          <div>
+            <p class='current_encounter_map'><%= @map.image %></p>
+          </div>
+          <div class>
+            <%= @current_encounter.stradegy %>
+          </div>
         </div>
       </div>
     <% else %>

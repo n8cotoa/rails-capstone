@@ -1,5 +1,9 @@
  $roboto: 'https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet';
 
+ .raids {
+   background-color: magenta;
+   color: gold;
+ }
 .banner {
   background-color: purple;
   color: gold;
@@ -35,6 +39,18 @@
 .current_encounter_symbols {
   display: flex;
   justify-content: space-between;
+}
+
+.map_strategy {
+  display: flex;
+  flex-direction: row;
+}
+
+.current_encounter_map {
+  width: 600px;
+  height: 450px;
+  background-color: grey;
+  margin-right: 10px;
 }
 
 .raid_symbols {

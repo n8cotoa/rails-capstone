@@ -1,22 +1,26 @@
-<h1><%= @group.name %></h1>
+<div class="ui container">
+  <h1><%= @group.name %></h1>
 
-<h2>Choose a Raid:</h2>
+  <h2>Choose a Raid:</h2>
 
-<% Raid.all.each do |raid| %>
-  <div id="raid<%=raid.id%>">
-    <%= form_for @group do |f| %>
-      <p><%= raid.name %> </p>
-      <p><%= raid.location %></p>
-      <p><%= raid.description %></p>
-    <%= f.hidden_field :id, :value => @group.id %>
-    <%= f.hidden_field :raid_id, :value => raid.id %>
-    <%= f.submit 'Select Raid' %>
-    <% end %>
-  </div>
-<% end %>
+  <% Raid.all.each do |raid| %>
+    <div id="raid<%=raid.id%>">
+      <%= form_for @group do |f| %>
+      <div class="raids">
+        <p><%= raid.name %> </p>
+        <p><%= raid.location %></p>
+        <p><%= raid.description %></p>
+      </div>
+      <%= f.hidden_field :id, :value => @group.id %>
+      <%= f.hidden_field :raid_id, :value => raid.id %>
+      <%= f.submit 'Select Raid' %>
+      <% end %>
+    </div>
+  <% end %>
 
-<% if @group.users.any? %>
-  <p>Users in group: <%= @group.users.count %></p>
-<% else %>
-  <p>There are currently no users in this group</p>
-<% end %>
+  <% if @group.users.any? %>
+    <p>Users in group: <%= @group.users.count %></p>
+  <% else %>
+    <p>There are currently no users in this group</p>
+  <% end %>
+</div>
