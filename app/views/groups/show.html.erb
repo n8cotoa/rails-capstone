@@ -6,14 +6,14 @@
   <% Raid.all.each do |raid| %>
     <div id="raid<%=raid.id%>">
       <%= form_for @group do |f| %>
-      <div class="raids">
-        <p><%= raid.name %> </p>
-        <p><%= raid.location %></p>
-        <p><%= raid.description %></p>
-      </div>
-      <%= f.hidden_field :id, :value => @group.id %>
-      <%= f.hidden_field :raid_id, :value => raid.id %>
-      <%= f.submit 'Select Raid' %>
+        <div class="raids">
+          <p class='raid_name'><%= raid.name %> </p>
+          <p class='raid_location'><%= raid.location %></p>
+          <p><%= raid.description %></p>
+          <%= f.submit 'Select Raid' %>
+        </div>
+        <%= f.hidden_field :id, :value => @group.id %>
+        <%= f.hidden_field :raid_id, :value => raid.id %>
       <% end %>
     </div>
   <% end %>

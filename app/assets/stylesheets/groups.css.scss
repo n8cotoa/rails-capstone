@@ -1,9 +1,22 @@
  $roboto: 'https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet';
 
  .raids {
-   background-color: magenta;
+   background-color: purple;
    color: gold;
+   text-align: center;
+   padding: 25px;
+   margin-bottom: 10px;
  }
+ 
+ .raid_name {
+   font-size: 2em;
+   line-height: 70%;
+ }
+ 
+ .raid_location {
+   font-size: 1.5em;
+ }
+ 
 .banner {
   background-color: purple;
   color: gold;
@@ -73,7 +86,7 @@
 }
 
 .message_right {
-  background-color: lightblue;
+  background-color: steelblue;
   color: white;
   border-radius: 5px;
   border-bottom-right-radius:  0px;
