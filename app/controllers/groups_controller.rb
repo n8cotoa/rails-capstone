@@ -53,6 +53,12 @@ class GroupsController < ApplicationController
     end
   end
   
+  def leave_raidroom
+    @group = Group.find(params[:group_id])
+    @group.users.destroy(current_user)
+    redirect_to groups_path
+  end
+  
 private
 
   def group_params

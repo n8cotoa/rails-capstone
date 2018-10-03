@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :groups do
     get :raidroom
+    post :leave_raidroom
   end
   
   resources :chat_rooms, only: [:show]
