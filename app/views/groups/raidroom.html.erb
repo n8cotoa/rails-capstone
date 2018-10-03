@@ -11,8 +11,14 @@
     </div>
   <% end %>
 </div>
-<div class="container">
-  <div class="current_encounter">
+<div class="ui grid">
+  <div class="one wide column">
+    
+  </div>
+  <div class="chat_room five wide column">
+    <%= render 'chat_rooms/show' %>
+  </div>
+  <div class="current_encounter nine wide column">
     <% if @group.current_encounter_id != nil %>
       <div class="current_encounter_info">
         <div class="current_encounter_symbols">
@@ -31,8 +37,5 @@
     <% else %>
       <p>Select an encounter.</p>
     <% end %>
-  </div>
-  <div class="chat_room">
-    <%= render 'chat_rooms/show' %>
   </div>
 </div>

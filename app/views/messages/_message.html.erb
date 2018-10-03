@@ -1,14 +1,8 @@
-<% if message.user == current_user %>
 <div class="single_message message_right">
   <p class='message_content'><%= message.content %></p>
   <p class='message_user'>User: <%= message.user.name %></p>
 </div>
-<% else %>
-<div class="single_message message_left">
-  <p class='message_content'><%= message.content %></p>
-  <p class='message_user'>User: <%= message.user.name %></p>
-</div>
-<% end %>
+
         
 
           

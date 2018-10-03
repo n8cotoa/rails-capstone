@@ -6,16 +6,18 @@
   text-align: center;
   margin-top: -15px;
   margin-bottom: 10px;
-  padding: 50px 0px;
+  padding: 25px 0px;
 }
 
 .banner h1 {
   font-family: $roboto, serif;
+  font-size: 3rem;
 }
 
 .encounters {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 15px;
 }
 
 .encounter-block {
@@ -27,7 +29,7 @@
 .current_encounter_info {
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .current_encounter_symbols {
@@ -42,7 +44,7 @@
 
 #messages {
   border: 1px lightgrey solid;
-  height: 200px;
+  height: 300px;
   width: 400px;
   overflow-y:scroll;
   margin-bottom: 5px;
@@ -76,5 +78,5 @@
 
 .field textarea {
   width: 400px !important;
-  height: 100px !important;
+  height: 75px !important;
 }
