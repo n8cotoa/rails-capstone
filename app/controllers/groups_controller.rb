@@ -26,8 +26,17 @@ class GroupsController < ApplicationController
   
   def show
     @group = Group.find(params[:id])
-    if @group.raid_id != nil
-      redirect_to group_raidroom_path(@group)
+    if @group.users.include?(current_user)
+      if @group.raid_id != nil
+        redirect_to group_raidroom_path(@group)
+      end
+    elsif @group.users.count <= 6
+      @group.users.push(current_user)
+      if @group.raid_id != nil
+        redirect_to group_raidroom_path(@group)
+      end
+    else
+      redirect_to groups_path
     end
   end
   
