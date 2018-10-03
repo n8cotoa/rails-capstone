@@ -3,10 +3,7 @@
   <%= form_for @group, url: {action: 'create'} do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-    
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
+  
     <%= f.submit class: 'ui button' %>
   <% end %>
 </div>

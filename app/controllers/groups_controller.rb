@@ -25,6 +25,9 @@ class GroupsController < ApplicationController
   
   def show
     @group = Group.find(params[:id])
+    if @group.raid_id != nil
+      redirect_to group_raidroom_path(@group)
+    end
   end
   
   def raidroom
