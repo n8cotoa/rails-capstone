@@ -24,6 +24,13 @@
         <% end %>
       </div>
     </div>
+    <div class="ui container">
+      <% flash.each do |key, value| %>
+        <div class="ui <%=key%> message">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>    
     <%= yield %>
   </body>
 </html>

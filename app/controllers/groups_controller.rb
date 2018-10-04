@@ -5,12 +5,19 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
   
+  def new
+    @group = Group.new
+    redirect_to groups_path
+  end
+  
   def create
     @group = Group.new(group_params)
     if @group.save 
+      flash[:success] = 'Your group has been created!'
       ChatRoom.create(group_id: @group.id)
       redirect_to group_path(@group)
     else
+      flash[:error] = 'Group not created, please check your input.'
       redirect_to new_group_path
     end
   end
@@ -31,11 +38,13 @@ class GroupsController < ApplicationController
         redirect_to group_raidroom_path(@group)
       end
     elsif @group.users.count <= 6
+      flash[:success] = 'You\'ve successfully joined the group!'
       @group.users.push(current_user)
       if @group.raid_id != nil
         redirect_to group_raidroom_path(@group)
       end
     else
+      flash[:error] = 'This group is full.'
       redirect_to groups_path
     end
   end
@@ -56,6 +65,7 @@ class GroupsController < ApplicationController
   def leave_raidroom
     @group = Group.find(params[:group_id])
     @group.users.destroy(current_user)
+    flash[:success] = 'You\'ve successfully left the group.'
     redirect_to groups_path
   end
   
