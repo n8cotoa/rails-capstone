@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'groups#index'
+  root to: 'static_pages#index'
   devise_for :users
   resources :groups do
     get :raidroom
     post :leave_raidroom
   end
+  
+  get 'destiny-raid-a-long', :to => 'static_pages#index'
   
   resources :chat_rooms, only: [:show]
   

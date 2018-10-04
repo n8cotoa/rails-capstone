@@ -1,0 +1,34 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$roboto: 'https://fonts.googleapis.com/css?family=Roboto';
+$mon: "https://fonts.googleapis.com/css?family=Montserrat";
+.splash-background {
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+
+.splash-background h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 5em;
+}
+
+.continue-button {
+  position: relative;
+  float: right;
+  right: 225px;
+  top: 50px;
+}
+
+.splash-image {
+  width: 100%;
+  height: auto;
+}
