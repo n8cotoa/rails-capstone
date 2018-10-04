@@ -38,7 +38,6 @@ class GroupsController < ApplicationController
         redirect_to group_raidroom_path(@group)
       end
     elsif @group.users.count <= 6
-      flash[:success] = 'You\'ve successfully joined the group!'
       @group.users.push(current_user)
       if @group.raid_id != nil
         redirect_to group_raidroom_path(@group)

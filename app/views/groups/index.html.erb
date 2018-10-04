@@ -1,12 +1,14 @@
 <div class="ui grid container">
   <div class="eight wide column">
     <h1>Groups</h1>
-
-    <ul>
+    <div class="groups">
       <% @groups.each do |group| %>
-        <li><%=link_to group.name, group_path(group) %> | # of Players: <%= group.users.count %></li>
+        <div class="group-card">
+          <p><%= group.name %> |  # of Players: <%= group.users.count %></p>
+          <%=link_to 'Join', group_path(group), class: 'ui violet button' %>
+        </div>
       <% end %>
-    </ul>
+    </div>
   </div>
   <div class="eight wide column">
     <%= render 'create' %>

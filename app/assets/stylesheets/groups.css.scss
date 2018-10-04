@@ -16,7 +16,29 @@
  .raid_location {
    font-size: 1.5em;
  }
- 
+
+ .groups {
+   height: 90%;
+   overflow-y: scroll;
+ }
+
+.group-card {
+ color: white;
+ background-color: #BA55D3;
+ border: 1px violet solid;
+ margin-bottom: 5px;
+ padding: 10px;
+ width: 85%;
+}
+
+.group-card p {
+ font-size: 1.5em;
+}
+
+.group-card .button {
+  margin-top: -10px !important;
+}
+  
 .banner {
   background-color: purple;
   color: gold;
@@ -27,8 +49,8 @@
 }
 
 .banner h1 {
-  font-family: $roboto, serif;
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .encounters {
